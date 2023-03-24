@@ -15,23 +15,23 @@ const Car = (props) => {
 
   //create a Black metallic color with THREE
   const blackMetallic = new THREE.Color(0x000000);
-  blackMetallic.convertSRGBToLinear();
+
 
   //create a Blue metallic color with THREE
   const blueMetallic = new THREE.Color("#ADD8E6");
-  blueMetallic.convertSRGBToLinear();
+
 
   //create a Red metallic color with THREE
   const redMetallic = new THREE.Color(0xff0000);
-  redMetallic.convertSRGBToLinear();
+
 
   //create a White metallic color with THREE
   const whiteMetallic = new THREE.Color(0xffffff);
-  whiteMetallic.convertSRGBToLinear();
+ 
 
   //create a Yellow metallic color with THREE
   const yellowMetallic = new THREE.Color(0xffff00);
-  yellowMetallic.convertSRGBToLinear();
+
 
   
 

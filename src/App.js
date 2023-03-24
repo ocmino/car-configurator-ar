@@ -19,14 +19,15 @@ function App() {
       <Configurator />
       <Modal opened={opened} onClose={close} fullScreen>
         <model-viewer
-       
           src="./Models/zis101asport1938.gltf"
-          ar
-          environment-image="shared-assets/environments/moon_1k.hdr"
-          poster="shared-assets/models/NeilArmstrong.webp"
-          shadow-intensity="1"
+          alt="A 3D model of a car"
+          auto-rotate
           camera-controls
-          touch-action="pan-y"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-scale="auto"
+          ios-src="https://cdn.glitch.com/0e1b3b0e-3e1b-4b0f-9b1f-8b3f2f3f2f1a%2Fcar.usdz?v=1629200000000"
+          style={{ width: "100vw", height: "80vh" }}
         ></model-viewer>
       </Modal>
 
