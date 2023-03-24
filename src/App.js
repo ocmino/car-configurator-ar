@@ -20,7 +20,7 @@ function App() {
       <Modal opened={opened} onClose={close} fullScreen>
         <model-viewer
         style={{width: "100vw", height: "100vh"}}
-          src="./Models/Car.gltf"
+          src="./Models/zis101asport1938.gltf"
           alt="A 3D model of a car"
           auto-rotate
           camera-controls
