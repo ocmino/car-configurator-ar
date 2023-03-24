@@ -6,6 +6,22 @@ import Configurator from "./Components/Configurator";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal, Button, Group } from "@mantine/core";
 
+function ModelViewer () {
+  return (
+    <model-viewer
+      src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+      alt="A 3D model of a car"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+
+      style={{ width: "100vw", height: "80vh" }}
+    ></model-viewer>
+  );
+}
+
 function App() {
   const [opened, { open, close }] = useDisclosure(false);
   return (
@@ -18,17 +34,7 @@ function App() {
       </Canvas>
       <Configurator />
       <Modal opened={opened} onClose={close} fullScreen>
-        <model-viewer
-          src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
-          alt="A 3D model of a car"
-          auto-rotate
-          camera-controls
-          ar
-          ar-modes="webxr scene-viewer quick-look"
-          ar-scale="auto"
-          ios-src="https://cdn.glitch.com/0e1b3b0e-3e1b-4b0f-9b1f-8b3f2f3f2f1a%2Fcar.usdz?v=1629200000000"
-          style={{ width: "100vw", height: "80vh" }}
-        ></model-viewer>
+        <ModelViewer />
       </Modal>
 
       <Group position="center">
@@ -49,3 +55,5 @@ function App() {
 }
 
 export default App;
+
+
