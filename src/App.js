@@ -19,35 +19,29 @@ function App() {
       <Configurator />
       <Modal opened={opened} onClose={close} fullScreen>
         <model-viewer
-        style={{width: "100vw", height: "100vh"}}
+       
           src="./Models/zis101asport1938.gltf"
-          alt="A 3D model of a car"
-          auto-rotate
-          camera-controls
           ar
-          ar-modes="webxr scene-viewer quick-look"
-          ar-scale="auto"
-          environment-image="neutral"
-          exposure="2"
+          environment-image="shared-assets/environments/moon_1k.hdr"
+          poster="shared-assets/models/NeilArmstrong.webp"
           shadow-intensity="1"
-          shadow-softness="0"
-   
+          camera-controls
+          touch-action="pan-y"
         ></model-viewer>
       </Modal>
 
       <Group position="center">
-        <Button 
-        style={
-          {
+        <Button
+          style={{
             position: "fixed",
             top: "95%",
             left: "10%",
             transform: "translate(-50%, -50%)",
-       
-
-             }
-        }
-        onClick={open}>AR</Button>
+          }}
+          onClick={open}
+        >
+          AR
+        </Button>
       </Group>
     </div>
   );
