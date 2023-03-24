@@ -10,7 +10,7 @@ function ModelViewer() {
   return (
     <model-viewer
     style={{width: "100vw", height: "80vh"}}
-      src="./Models/Tesla.glb"
+      src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
       ar
       ar-modes="webxr scene-viewer quick-look"
       camera-controls
