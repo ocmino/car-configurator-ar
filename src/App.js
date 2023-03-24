@@ -27,9 +27,12 @@ function App() {
           ar
           ar-modes="webxr scene-viewer quick-look"
           ar-scale="auto"
-          >
-
-          </model-viewer>
+          environment-image="neutral"
+          exposure="2"
+          shadow-intensity="1"
+          shadow-softness="0"
+   
+        ></model-viewer>
       </Modal>
 
       <Group position="center">
