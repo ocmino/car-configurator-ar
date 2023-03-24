@@ -3,21 +3,22 @@ import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import Experience from "./Components/Experience";
 import Configurator from "./Components/Configurator";
-import {  Button, Group } from "@mantine/core";
+import { Button, Group } from "@mantine/core";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 function ModelViewer() {
   return (
     <model-viewer
-      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-      alt="A 3D model of a car"
-      auto-rotate
-      camera-controls
+    style={{width: "100vw", height: "80vh"}}
+      src="./Models/CarMV.glb"
       ar
       ar-modes="webxr scene-viewer quick-look"
-      ar-scale="auto"
-      style={{ width: "100vw", height: "80vh" }}
-    ></model-viewer>
+      camera-controls
+      poster="poster.webp"
+      shadow-intensity="1"
+    >
+      {" "}
+    </model-viewer>
   );
 }
 
