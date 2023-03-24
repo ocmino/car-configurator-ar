@@ -3,27 +3,25 @@ import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import Experience from "./Components/Experience";
 import Configurator from "./Components/Configurator";
-import { useDisclosure } from "@mantine/hooks";
-import { Modal, Button, Group } from "@mantine/core";
+import {  Button, Group } from "@mantine/core";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
-function ModelViewer () {
+function ModelViewer() {
   return (
     <model-viewer
-      src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+      src="./Models/zis101asport1938.gltf"
       alt="A 3D model of a car"
       auto-rotate
       camera-controls
       ar
       ar-modes="webxr scene-viewer quick-look"
       ar-scale="auto"
-
       style={{ width: "100vw", height: "80vh" }}
     ></model-viewer>
   );
 }
 
-function App() {
-  const [opened, { open, close }] = useDisclosure(false);
+function CarShow() {
   return (
     <div className="App">
       <Canvas dpr={[1, 2]} shadows camera={{ fov: 45 }}>
@@ -33,27 +31,34 @@ function App() {
         <Experience />
       </Canvas>
       <Configurator />
-      <Modal opened={opened} onClose={close} fullScreen>
-        <ModelViewer />
-      </Modal>
 
       <Group position="center">
-        <Button
-          style={{
-            position: "fixed",
-            top: "95%",
-            left: "10%",
-            transform: "translate(-50%, -50%)",
-          }}
-          onClick={open}
-        >
-          AR
-        </Button>
+        <Link to="/modelviewer">
+          <Button
+            style={{
+              position: "fixed",
+              top: "95%",
+              left: "10%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            AR
+          </Button>
+        </Link>
       </Group>
     </div>
   );
 }
 
-export default App;
-
-
+export default function App() {
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<CarShow />} />
+          <Route path="/modelviewer" element={<ModelViewer />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+}
