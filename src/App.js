@@ -19,7 +19,7 @@ function App() {
       <Configurator />
       <Modal opened={opened} onClose={close} fullScreen>
         <model-viewer
-          src="./Models/zis101asport1938.gltf"
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
           alt="A 3D model of a car"
           auto-rotate
           camera-controls
