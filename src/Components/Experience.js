@@ -10,7 +10,7 @@ const Experience = () => {
       zoom={0.7}
       polar={[-0.1, Math.PI / 4]}
     >
-      <Stage environment="city" intensity={0.5}>
+      <Stage environment="sunset" intensity={0.5}>
         <Car />
       </Stage>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.64, 0]} receiveShadow>
