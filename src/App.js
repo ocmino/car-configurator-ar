@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 function ModelViewer() {
   return (
     <model-viewer
-      src="./Models/zis101asport1938.gltf"
+      src="./Models/Car.gltf"
       alt="A 3D model of a car"
       auto-rotate
       camera-controls
