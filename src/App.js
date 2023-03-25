@@ -10,7 +10,7 @@ function ModelViewer() {
   return (
     <model-viewer
     style={{width: "100vw", height: "80vh"}}
-      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+      src="./Models/Car.gltf"
       ar
       ar-modes="webxr scene-viewer quick-look"
       camera-controls
