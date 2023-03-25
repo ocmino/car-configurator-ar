@@ -10,7 +10,7 @@ function ModelViewer() {
   return (
     <model-viewer
     style={{width: "100vw", height: "80vh"}}
-      src="./Models/zis101asport1938.gltf"
+      src="./Models/CarMV.glb"
       ar
       ar-modes="webxr scene-viewer quick-look"
       camera-controls
