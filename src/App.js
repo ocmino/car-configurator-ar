@@ -10,7 +10,7 @@ function ModelViewer() {
   return (
     <model-viewer
     style={{width: "100vw", height: "80vh"}}
-      src="./Models/CarMV.glb"
+      src="https://pahlenspoolermodels.s3.eu-north-1.amazonaws.com/DebugModel.glb"
       ar
       ar-modes="webxr scene-viewer quick-look"
       camera-controls
