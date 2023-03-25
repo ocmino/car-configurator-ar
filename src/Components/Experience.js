@@ -1,6 +1,6 @@
 import { PresentationControls, Stage } from "@react-three/drei";
 import { MeshReflectorMaterial } from "@react-three/drei";
-import Car from "../Car";
+import Car2 from "../Car2";
 
 const Experience = () => {
   return (
@@ -11,7 +11,7 @@ const Experience = () => {
       polar={[-0.1, Math.PI / 4]}
     >
       <Stage environment="sunset" intensity={0.5}>
-        <Car />
+        <Car2 />
       </Stage>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.64, 0]} receiveShadow>
         <planeGeometry args={[170, 170]} />
