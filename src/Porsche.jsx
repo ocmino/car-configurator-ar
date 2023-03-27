@@ -33,7 +33,7 @@ const Porsche = (props) => {
   const yellowMetallic = new THREE.Color(0xffff00);
 
   return (
-    <group {...props} dispose={null} position={[0, 1.69, 0]}>
+    <group {...props} dispose={null} position={[0, 0, 0]}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.81}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[0, 0.47, 3.12]} rotation={[-2.83, 0, Math.PI]} scale={[1, 0.96, 1]}>

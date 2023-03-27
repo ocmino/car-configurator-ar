@@ -13,7 +13,7 @@ const Experience = () => {
       <Stage environment="sunset" intensity={0.5}>
         <Porsche />
       </Stage>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.64, 0]} receiveShadow>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 0]} receiveShadow>
         <planeGeometry args={[170, 170]} />
         <MeshReflectorMaterial
           blur={[300, 100]}
