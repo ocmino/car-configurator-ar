@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { useCustomization } from "./Context/Customization";
 
 function ModelViewer() {
-  const { carColor, setCarColor } = useCustomization();
+  const { carColor } = useCustomization();
   console.log(carColor);
 
   //array of srcs
