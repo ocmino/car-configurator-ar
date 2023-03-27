@@ -7,6 +7,7 @@ import { Button, Group } from "@mantine/core";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { useCustomization } from "./Context/Customization";
 
+import { Loader } from "@mantine/core";
 
 function ModelViewer() {
   const { carColor } = useCustomization();
@@ -27,7 +28,7 @@ function ModelViewer() {
       ? srcs[3]
       : carColor === "Blue"
       ? srcs[2]
-      : carColor === "Red"  
+      : carColor === "Red"
       ? srcs[1]
       : carColor === "White"
       ? srcs[4]
@@ -35,11 +36,9 @@ function ModelViewer() {
       ? srcs[0]
       : srcs[3];
 
-
-
   return (
     <model-viewer
-    style={{width: "100vw", height: "100vh"}}
+      style={{ width: "100vw", height: "100vh" }}
       src={src}
       ar
       ar-modes="webxr scene-viewer quick-look"
@@ -84,6 +83,17 @@ function CarShow() {
 export default function App() {
   return (
     <div>
+      <Loader
+        size="xl"
+        color="blue"
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          backdropFilter: "blur(10px)",
+        }}
+      />
       <Router>
         <Routes>
           <Route path="/" element={<CarShow />} />
