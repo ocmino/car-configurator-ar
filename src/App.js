@@ -5,12 +5,41 @@ import Experience from "./Components/Experience";
 import Configurator from "./Components/Configurator";
 import { Button, Group } from "@mantine/core";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { useCustomization } from "./Context/Customization";
 
 function ModelViewer() {
+  const { carColor, setCarColor } = useCustomization();
+  console.log(carColor);
+
+  //array of srcs
+  const srcs = [
+    "./Models/yellow.glb",
+    "./Models/red.glb",
+    "./Models/blue.glb",
+    "./Models/black.glb",
+    "./Models/white.glb",
+  ];
+
+  //create a src const with an if statement
+  const src =
+    carColor === "Black"
+      ? srcs[3]
+      : carColor === "Blue"
+      ? srcs[2]
+      : carColor === "Red"  
+      ? srcs[1]
+      : carColor === "White"
+      ? srcs[4]
+      : carColor === "Yellow"
+      ? srcs[0]
+      : srcs[3];
+
+
+
   return (
     <model-viewer
     style={{width: "100vw", height: "80vh"}}
-      src="./Models/porsche.glb"
+      src={src}
       ar
       ar-modes="webxr scene-viewer quick-look"
       camera-controls
