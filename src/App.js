@@ -38,7 +38,7 @@ function ModelViewer() {
 
   return (
     <model-viewer
-      style={{ width: "100vw", height: "100vh" }}
+      style={{ width: "100vw", height: "90vh" }}
       src={src}
       ar
       ar-modes="webxr scene-viewer quick-look"
