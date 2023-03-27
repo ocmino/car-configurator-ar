@@ -13,11 +13,11 @@ function ModelViewer() {
 
   //array of srcs
   const srcs = [
-    "./Models/yellow.glb",
-    "./Models/red.glb",
-    "./Models/blue.glb",
-    "./Models/black.glb",
-    "./Models/white.glb",
+    "./Models/retro_car_yellow.glb",
+    "./Models/retro_car_red.glb",
+    "./Models/retro_car_blue.glb",
+    "./Models/retro_car_black.glb",
+    "./Models/retro_car_white.glb",
   ];
 
   //create a src const with an if statement
