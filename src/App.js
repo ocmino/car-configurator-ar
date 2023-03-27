@@ -92,6 +92,7 @@ export default function App() {
           left: "50%",
           transform: "translate(-50%, -50%)",
           backdropFilter: "blur(10px)",
+          zIndex: "-1"
         }}
       />
       <Router>
