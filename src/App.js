@@ -38,7 +38,7 @@ function ModelViewer() {
 
   return (
     <model-viewer
-      style={{ width: "100vw", height: "100vh" }}
+      style={{ width: "100vw", height: "80vh" }}
       src={src}
       ar
       ar-modes="webxr scene-viewer quick-look"
@@ -63,7 +63,7 @@ function CarShow() {
           left: "50%",
           transform: "translate(-50%, -50%)",
           backdropFilter: "blur(10px)",
-          zIndex: "-10"
+          zIndex: "-10",
         }}
       />
       <Canvas dpr={[1, 2]} shadows camera={{ fov: 45 }}>
@@ -95,7 +95,6 @@ function CarShow() {
 export default function App() {
   return (
     <div>
-    
       <Router>
         <Routes>
           <Route path="/" element={<CarShow />} />
