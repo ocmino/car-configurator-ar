@@ -5,7 +5,13 @@ import Retro from "../Retro";
 const Experience = () => {
   return (
     <>
-      <OrbitControls />
+      <OrbitControls
+        enablePan={false}
+        maxDistance={10}
+        minDistance={2}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 4}
+      />
       <Retro />
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 0]} receiveShadow>
         <planeGeometry args={[170, 170]} />

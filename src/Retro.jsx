@@ -27,7 +27,7 @@ const Retro = (props) => {
   //create a Yellow metallic color with THREE
   const yellowMetallic = new THREE.Color(0xffff00);
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[0, -1, 0]}>
       <group position={[0, 0.99, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <mesh geometry={nodes.Back1_low_Lincoln1_0.geometry} material={materials.Lincoln1} />
