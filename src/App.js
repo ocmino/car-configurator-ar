@@ -7,6 +7,7 @@ import { Button, Group } from "@mantine/core";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { useCustomization } from "./Context/Customization";
 
+
 function ModelViewer() {
   const { carColor } = useCustomization();
   console.log(carColor);
@@ -67,7 +68,7 @@ function CarShow() {
           <Button
             style={{
               position: "fixed",
-              top: "95%",
+              top: "5%",
               left: "10%",
               transform: "translate(-50%, -50%)",
             }}

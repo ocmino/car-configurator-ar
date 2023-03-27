@@ -3,7 +3,7 @@ import { useCustomization } from "../Context/Customization";
 
 const Configurator = () => {
   const { carColor, setCarColor } = useCustomization();
-  console.log(carColor);
+
   return (
     <div className="configurator">
       <div className="configurator__section">
